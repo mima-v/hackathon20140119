@@ -3,6 +3,6 @@ class Event < ActiveRecord::Base
 
   acts_as_taggable
 
-  validates: :name, length: {maximun: 20}, presence: true
-  validates: :description, length: {maximun: 32}, presence: true
+  #validates: :name, length: {maximun: 20}, presence: true
+  #validates: :description, length: {maximun: 32}, presence: true
 end
