@@ -1,4 +1,5 @@
 - @tags = Event.tag_counts_on(:tags).order('count DESC')
+%div #{image_tag "layouts/title_tag-cloud.png"}
 - if @tags.present?
   - @tags.each do |tag|
     #{link_to tag, "/events/tag/#{tag}"}

@@ -1,7 +1,7 @@
 #layouts-main-left
   .list
     - @events.each do |event|
-      .clearfix.event-item #{render "events/item", event: event}
+      .clearfix.event-item #{render "events/item", data: event}
   #{link_to '新しいイベントを作成', new_event_path}
 
 
