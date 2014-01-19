@@ -22,10 +22,12 @@
     header, footer{
         height: 100px;
         line-height: 100px;
-        background: #AAA;
+        color: #666;
         text-align: center;
         font-size: 24px;
-        color: #666;
+    }
+    header{
+        text-align:left;
     }
 
     footer{
