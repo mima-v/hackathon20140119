@@ -1,0 +1,14 @@
+.top_listbox
+  .top_listbox-thumb #{image_tag data.image.to_s.presence || "events/thumbnail_top.png"}
+  .top_listbox-txt
+    %span.top_main-color #{data.opened_at.strftime("%Y/%m/%d %H:%M")}-#{data.closed_at.strftime("%H:%M")}
+    %p.top_main-title #{link_to data.name, data}
+    %span.top_main-descri #{data.description}
+    %p
+      %span.top_main-tag
+        - if data.tags.present?
+          - data.tags.each do |tag|
+            #{link_to tag, "/event/tag/#{tag}"}
+        - else
+          #{"--"}
+      %div #{link_to image_tag("events/btn_show_detail.png"), "#"}

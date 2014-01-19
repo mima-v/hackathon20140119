@@ -1,17 +1,8 @@
 #layouts-main-left
-  %h1 Listing events
-
-  %table
-    %tr
-      %th name
+  .list
     - @events.each do |event|
-      %tr
-        %td #{event.name}
-        %td #{link_to 'Show', event}
-        %td #{link_to 'Edit', edit_event_path(event)}
-        %td #{link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }}
-
-  #{link_to 'New Test', new_event_path}
+      .clearfix.event-item #{render "events/item", data: event}
+  #{link_to '新しいイベントを作成', new_event_path}
 
 
 #layouts-main-right #{render "events/right_side"}
