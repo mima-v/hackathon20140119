@@ -1,0 +1,14 @@
+!!!
+%html{xmlns: "http://www.w3.org/1999/xhtml", "xml:lang"=> :ja, lang: :ja, "xmlns:og" =>"http://ogp.me/ns#"}
+  %head
+    = render "layouts/application/meta"
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = favicon_link_tag
+    = csrf_meta_tags
+  %body
+    #top
+    %header
+    #layouts-main-container
+      .clear{id: "#{params[:controller]}"} #{yield}
+    %footer
