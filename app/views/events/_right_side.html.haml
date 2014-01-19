@@ -1,1 +1,6 @@
-sssssssssss
+- @tags = Event.tag_counts_on(:tags).order('count DESC')
+- if @tags.present?
+  - @tags.each do |tag|
+    #{link_to tag, "/events/tag/#{tag}"}
+- else
+  タグが存在しません
