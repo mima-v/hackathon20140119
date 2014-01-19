@@ -1,0 +1,46 @@
+#pc{
+    background: #FFF;
+    header, footer, #layouts-main-container{
+        > div{
+            width: 980px;
+            margin: 0 auto;
+        }
+    }
+
+    #layouts-main-container{
+        margin: 10px 0px;
+    }
+    #layouts-main-right{
+        float: right;
+        width: 300px;
+        background: #FFA;
+    }
+    #layouts-main-left{
+        float: left;
+        width: 660px;
+        background: #FAF;
+    }
+
+    header, footer{
+        height: 100px;
+        line-height: 100px;
+        background: #AAA;
+        text-align: center;
+        font-size: 24px;
+        color: #666;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

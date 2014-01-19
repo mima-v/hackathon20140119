@@ -6,9 +6,11 @@
     = javascript_include_tag "application"
     = favicon_link_tag
     = csrf_meta_tags
-  %body
+  %body#pc
     #top
     %header
+      .clearfix #{render "layouts/application/header"}
     #layouts-main-container
-      .clear{id: "#{params[:controller]}"} #{yield}
+      .clearfix{id: "#{params[:controller]}"} #{yield}
     %footer
+      .clearfix #{render "layouts/application/footer"}
