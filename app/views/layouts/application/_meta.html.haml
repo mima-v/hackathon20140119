@@ -1,0 +1,12 @@
+- desc = @description.presence || "not use description"
+- title = @title.present? ? "#{@title}" : "not use title"
+- site_name = "仮"
+- keywords = @keywords.presence || []
+%title #{title.to_s}
+%meta{"http-equiv"=>"content-type", content: "text/html;charset=UTF-8"}
+%meta{name: "description", content: "#{desc}"}
+%meta{name: "keywords", content: keywords.join(",")}
+%meta{property: "og:type", content: "website"}
+%meta{property: "og:description", content: "#{desc}"}
+%meta{property: "og:url", content: "#{request.url}"}
+%meta{property: "og:site_name", content: site_name}
