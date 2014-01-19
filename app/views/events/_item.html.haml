@@ -2,14 +2,18 @@
   .top_listbox-thumb #{image_tag data.image.to_s.presence || "events/thumbnail_top.png"}
   .top_listbox-txt
     %span.top_main-color #{data.opened_at.strftime("%Y/%m/%d %H:%M")}-#{data.closed_at.strftime("%H:%M")}
-    %p.top_main-title #{link_to data.name, data}
+    %p.top_main-title
+      #{link_to data.name, data}
+      %span.top_main-persons #{data.now_member.to_i}/#{data.max_member.to_i}
     %span.top_main-descri #{data.description}
     %p
-      %span #{link_to location_str(data.location_id), "/events/location/#{data.location_id}"}
+      #{image_tag "events/btn_area_top.png"}
+      %span.top_main-tag #{link_to location_str(data.location_id), "/events/location/#{data.location_id}"}
+      #{image_tag "events/btn_genrea_top.png"}
       %span.top_main-tag
         - if data.tags.present?
           - data.tags.each do |tag|
             #{link_to tag, "/events/tag/#{tag}"}
         - else
           #{"--"}
-      %div #{link_to image_tag("events/btn_show_detail.png"), "#"}
+      %div #{link_to image_tag("events/btn_show_detail.png"), data.url, target: :_blank}
