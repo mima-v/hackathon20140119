@@ -1,0 +1,8 @@
+#layouts-main-left
+  %h1 #{params[:tag]}タグのついたイベント
+  .list
+    - @events.each do |event|
+      .clearfix.event-item #{render "events/item", data: event}
+
+
+#layouts-main-right #{render "events/right_side"}

@@ -8,7 +8,7 @@
       %span.top_main-tag
         - if data.tags.present?
           - data.tags.each do |tag|
-            #{link_to tag, "/event/tag/#{tag}"}
+            #{link_to tag, "/events/tag/#{tag}"}
         - else
           #{"--"}
       %div #{link_to image_tag("events/btn_show_detail.png"), "#"}

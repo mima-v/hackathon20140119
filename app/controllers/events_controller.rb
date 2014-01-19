@@ -10,6 +10,17 @@ class EventsController < ApplicationController
     end
   end
 
+  # GET /events/tag/:tag
+  # GET /events/tag/:tag.json
+  def tag
+    @events = Event.tagged_with(params[:tag])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
