@@ -5,7 +5,7 @@
     %p.top_main-title #{link_to event.name, event}
     %span.top_main-descri #{event.description}
     %p
-      %span #{link_to location_str(data.location_id), "/events/location/#{data.location_id}"}
+      %span #{link_to location_str(event.location_id), "/events/location/#{event.location_id}"}
       %span.top_main-tag
         - if event.tags.present?
           - event.tags.each do |tag|
