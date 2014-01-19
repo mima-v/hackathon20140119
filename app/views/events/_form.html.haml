@@ -1,0 +1,30 @@
+= form_for(@event) do |f|
+  - if @event.errors.any?
+    #error_explanation
+      %h2 #{pluralize(@event.errors.count, "error")} prohibited this test from being saved:
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li #{msg}
+  .field
+    #{f.label :name}
+    #{f.text_field :name}
+  .field
+    #{f.label :location}
+    #{f.select:location_id, location_lists}
+  .field
+    #{f.label :description}
+    #{f.text_field :description}
+  .field
+    #{f.label :max_member}
+    #{f.number_field :max_member}
+  .field
+    #{f.label :image_url}
+    #{f.text_field :image}
+  .field
+    #{f.label :opened_at}
+    #{f.date_select :opened_at}
+  .field
+    #{f.label :closed_at}
+    #{f.date_select :closed_at}
+  .actions
+    #{f.submit}
