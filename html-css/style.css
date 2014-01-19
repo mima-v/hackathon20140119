@@ -39,6 +39,11 @@ p{
 	padding-left:10px;
 	font-size: 14px;
 }
+.sidebar{
+	background: url(img/title_tag-cloud.png) no-repeat;
+	width:219px;
+	height:26px;
+}
 
 
 
