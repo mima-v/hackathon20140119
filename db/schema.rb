@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140119080553) do
+ActiveRecord::Schema.define(:version => 20140119091711) do
 
   create_table "events", :force => true do |t|
     t.integer  "location_id",               :null => false
@@ -43,5 +43,13 @@ ActiveRecord::Schema.define(:version => 20140119080553) do
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
