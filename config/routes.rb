@@ -2,6 +2,7 @@ HackathonTbs::Application.routes.draw do
   root :to => 'events#index'
   resources :events
   get "events/tag/:tag" => "events#tag"
+  get "events/location/:location" => "events#location"
 
   # See how all your routes lay out with "rake routes"
 

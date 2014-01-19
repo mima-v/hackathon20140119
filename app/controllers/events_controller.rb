@@ -21,6 +21,17 @@ class EventsController < ApplicationController
     end
   end
 
+  # GET /events/location/:location
+  # GET /events/location/:location.json
+  def location
+    @events = Event.where(location_id: params[:location]).page(params[:page]).per(20)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @events }
+    end
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
