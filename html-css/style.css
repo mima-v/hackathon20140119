@@ -1,0 +1,40 @@
+p{
+	padding:0;
+	margin:0;
+}
+.top_listbox{
+	background: url(img/top_listbox-bg.png) no-repeat;
+	width:676px;
+	height:136px;
+	padding: 15px 10px;
+	line-height:130%;
+}
+.top_listbox-thumb{
+	float: left;
+	width: 165px;
+	height: 117px;
+}
+.top_listbox-txt{
+	float: left;
+	width: 508px;
+
+}
+.top_main-color{
+	color: #50b4b6;/*main color*/
+	font-size: 12px;
+}
+.top_main-title{
+	font-size: 20px;
+	margin: 0;
+}
+.top_main-descri{
+	font-size: 14px;
+}
+.top_main-tag a:link{
+	font-size: 11px;
+	color: #color: #50b4b6;/*main color*/
+}
+
+
+
+
